@@ -1,0 +1,13 @@
+问题一
+问题详情： SyntaxError: Non-ASCII character '\xc3' in file pic2char.py on line 4, but coding declared; see http://www.python.org/peps/pep-0263.html for details
+
+原因：python 的默认编码文件是ACSII，而编辑器将文件保存为UTF-8格式的，只要文件中存在中文，就会产生该问题。
+
+解决方法：在源代码第一行加入 # -*-coding:UTF-8 -*- 或者 #coding=utf-8
+
+问题二
+问题详情：PIL The _imaging C module is not installed
+
+原因：我的电脑是win8 64位的，刚开始安装的是官网提供的版本：http://www.pythonware.com/products/pil/ ，PIL1.1.7 该版本是在win32位上编译好的，所以在64位电脑上会有问题
+
+解决方法：我从这里（）下载安装了Pillow-2.5.3.win-amd64-py2.7.exe
